@@ -29,3 +29,5 @@ decreaseBtn.addEventListener("click", () => {
     calculateBill();
   }
 });
+
+// test
