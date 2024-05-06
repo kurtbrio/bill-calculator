@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Calculator</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="form-container">
+        <form class="flex">
+          <label for="total-bill">Total Bill:</label>
+          <div class="input">
+            <span>$</span>
+            <input
+              type="text"
+              id="total-bill"
+              name="total-bill"
+              placeholder="0.00"
+              onkeyup="calculateBill()"
+            />
+          </div>
+
+          <label for="total-tip">Tip:</label>
+          <div class="input">
+            <span>%</span>
+            <input
+              type="text"
+              id="total-tip"
+              name="total-tip"
+              placeholder="0.00"
+              onkeyup="calculateBill()"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="bottom">
+        <div class="split-container">
+          <div class="title">Number of Person:</div>
+          <div class="person-count">
+            <button class="split-btn" id="decreaseBtn">-</button>
+            <span id="numberOfPeople">1</span>
+            <button class="split-btn" id="increaseBtn">+</button>
+          </div>
+        </div>
+
+        <div class="total-container">
+          <div class="title">Total Per Person:</div>
+          <div class="total" id="billPerPerson">$0.00</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
